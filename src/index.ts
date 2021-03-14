@@ -13,7 +13,7 @@ const main = async () => {
   const orm = await MikroORM.init(mikroConfig);
   await orm.getMigrator().up();
 
-  orm.em.nativeDelete(Post,{})
+  // orm.em.nativeDelete(Post,{})
   const post = orm.em.create(Post, {title: "กินข้าวอร่อยจังเลย1"})
   await orm.em.persistAndFlush(post);
   const post2 = orm.em.create(Post, {title: "กินข้าวอร่อยจังเลย2"})
