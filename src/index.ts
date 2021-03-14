@@ -16,7 +16,7 @@ const main = async () => {
   orm.em.nativeDelete(Post,{})
   const post = orm.em.create(Post, {title: "กินข้าวอร่อยจังเลย1"})
   await orm.em.persistAndFlush(post);
-  const post2 = orm.em.create(Post, {title: "กินข้าวอร่อยจังเลย1"})
+  const post2 = orm.em.create(Post, {title: "กินข้าวอร่อยจังเลย2"})
   await orm.em.persistAndFlush(post2);
 
   const posts = await orm.em.find(Post, {})
